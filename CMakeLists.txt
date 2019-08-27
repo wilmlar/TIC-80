@@ -248,6 +248,9 @@ if(BUILD_SDL AND NOT EMSCRIPTEN)
         include_directories(${ANDROID_NDK}/sources/android/cpufeatures)
     endif()
 
+	if(LINUX)
+		link_directories(/opt/vc/lib)
+	endif()
 	add_subdirectory(${THIRDPARTY_DIR}/sdl2)
 
 endif()
